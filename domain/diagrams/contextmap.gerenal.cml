@@ -1,0 +1,32 @@
+ContextMap Anselmex {
+
+	// Core
+	contains WalletsContext
+	contains WithdrawalsContext
+	contains NFTContext	
+	contains TransactionsContext
+
+	// Support
+	contains AccountsContext
+	contains LoginsContext	
+	contains InternalWalletsContext
+	contains CancellationsContext	
+
+	// Generic
+	contains CreditBodyContext	
+	
+	
+	// CargoBookingContext [SK]<->[SK] VoyagePlanningContext
+	// CargoBookingContext <- LocationContext
+	// VoyagePlanningContext <- LocationContext
+	
+}
+BoundedContext AccountsContext
+BoundedContext LoginsContext
+BoundedContext WalletsContext
+BoundedContext WithdrawalsContext
+BoundedContext TransactionsContext
+BoundedContext InternalWalletsContext
+BoundedContext CancellationsContext
+BoundedContext NFTContext
+BoundedContext CreditBodyContext

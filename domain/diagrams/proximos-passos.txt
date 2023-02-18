@@ -1,0 +1,9 @@
+Nomear corretamente os contextos
+Renomear toda a estrutura e respeitar a linguagem ubiqua
+Saber todos os pontos de relação entre os domínios
+Extrir e classificar os domínios em Core, Genérico ou de Suporte
+Agrupar os contextos em domínios
+Desenhar o mapa de contextos
+
+Revisar tudo
+
