@@ -7,3 +7,16 @@ Desenhar o mapa de contextos
 
 Revisar tudo
 
+=================
+
+Ler alguns diagramas prontos como exemplo
+Traçar o diagrama context-map final com as indicações do DDD
+Revisar e fechar versão final
+
+==================
+
+Extrair os elementos táticos com base na estratégia
+Definir os cards das funcionalidades
+Definir arquitetura da solução
+Definir prazo do projeto e elementos relacionados ao Scrum
+
