@@ -1,0 +1,77 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"AccountsCancellationsContext" ["margin"="0.3","orientation"="191","shape"="egg","fontsize"="16","style"="bold","label"="AccountsCancellationsContext\n","fontname"="sans-serif"]
+"LoginsContext" ["margin"="0.3","orientation"="345","shape"="egg","fontsize"="16","style"="bold","label"="LoginsContext\n","fontname"="sans-serif"]
+"AccountsCreationContext" ["margin"="0.3","orientation"="335","shape"="egg","fontsize"="16","style"="bold","label"="AccountsCreationContext\n","fontname"="sans-serif"]
+"CreditBodyContext" ["margin"="0.3","orientation"="76","shape"="egg","fontsize"="16","style"="bold","label"="CreditBodyContext\n","fontname"="sans-serif"]
+"UserWalletContext" ["margin"="0.3","orientation"="153","shape"="egg","fontsize"="16","style"="bold","label"="UserWalletContext\n","fontname"="sans-serif"]
+"WithdrawalsContext" ["margin"="0.3","orientation"="35","shape"="egg","fontsize"="16","style"="bold","label"="WithdrawalsContext\n","fontname"="sans-serif"]
+"InternalWalletContext" ["margin"="0.3","orientation"="189","shape"="egg","fontsize"="16","style"="bold","label"="InternalWalletContext\n","fontname"="sans-serif"]
+"TransactionsContext" ["margin"="0.3","orientation"="208","shape"="egg","fontsize"="16","style"="bold","label"="TransactionsContext\n","fontname"="sans-serif"]
+"NftTransactionContext" ["margin"="0.3","orientation"="114","shape"="egg","fontsize"="16","style"="bold","label"="NftTransactionContext\n","fontname"="sans-serif"]
+"AccountsRequestsContext" ["margin"="0.3","orientation"="344","shape"="egg","fontsize"="16","style"="bold","label"="AccountsRequestsContext\n","fontname"="sans-serif"]
+"NftCreationContext" ["margin"="0.3","orientation"="290","shape"="egg","fontsize"="16","style"="bold","label"="NftCreationContext\n","fontname"="sans-serif"]
+"AccountsCancellationsContext" -> "LoginsContext" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>CF</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"AccountsCreationContext" -> "CreditBodyContext" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"AccountsCreationContext" -> "UserWalletContext" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"AccountsCreationContext" -> "LoginsContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"AccountsCreationContext" -> "WithdrawalsContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"AccountsCreationContext" -> "AccountsCancellationsContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"UserWalletContext" -> "WithdrawalsContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"UserWalletContext" -> "InternalWalletContext" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"UserWalletContext" -> "TransactionsContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">U</td><td sides="trbl" bgcolor="white"><font>OHS</font></td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"UserWalletContext" -> "NftTransactionContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">U</td><td sides="trbl" bgcolor="white"><font>OHS</font></td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"InternalWalletContext" -> "WithdrawalsContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"TransactionsContext" -> "WithdrawalsContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"NftTransactionContext" -> "WithdrawalsContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"AccountsRequestsContext" -> "AccountsCreationContext" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"NftCreationContext" -> "WithdrawalsContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+}
