@@ -1,116 +1,104 @@
 // --------------------------------------------------------------------------------
-// Boundary Contexts
+// Bounded Contexts
 // --------------------------------------------------------------------------------
 
 
-// Core
-BoundedContext UserWalletContext implements WalletsDomain
+BoundedContext UserWallet implements WalletsDomain
 {
 	type = FEATURE
-	domainVisionStatement = "???"
-	implementationTechnology = "???"
+	domainVisionStatement = "Esse contexto lida com todas as carteiras que o usuário possui no sistema"
+	implementationTechnology = "C#"
 	responsibilities = "???"
 	
 	Aggregate Wallet
 }
-BoundedContext WithdrawalsContext implements WithdrawalsDomain
+BoundedContext Withdrawals implements WithdrawalsDomain
 {
 	type = FEATURE
-	domainVisionStatement = "???"
+	domainVisionStatement = "Esse contexto lida com pedidos de saques e depósitos, devendo estar corretamente alinhado com os contextos que tratam de valores"
 	implementationTechnology = "???"
 	responsibilities = "???"
 	
-	Aggregate Withdrawal
+	Aggregate WithdrawalRequest
 }
-BoundedContext NftTransactionContext implements NftDomain
+BoundedContext NftTransaction implements NftDomain
 {
 	type = FEATURE
-	domainVisionStatement = "???"
+	domainVisionStatement = "Contexto responsável por executar transações (compra/venda) de NFT"
 	implementationTechnology = "???"
 	responsibilities = "???"
 	
 	Aggregate NftTransaction
 }
-BoundedContext NftCreationContext implements NftDomain
+BoundedContext NftCreation  implements NftDomain
 {
 	type = FEATURE
-	domainVisionStatement = "???"
+	domainVisionStatement = "Contexto responsável por criar novas NFTs para o usuário"
 	implementationTechnology = "???"
 	responsibilities = "???"
 	
 	Aggregate NftCreation
 }
-BoundedContext TransactionsContext implements TransactionsDomain
+BoundedContext Transactions  implements TransactionsDomain
 {
 	type = FEATURE
-	domainVisionStatement = "???"
+	domainVisionStatement = "Contexto responsável poe lidar com as transações (compra/venda) de qualquer moeda"
 	implementationTechnology = "???"
 	responsibilities = "???"
 	
 	Aggregate Transaction
 }
 
-// Support
-BoundedContext AccountsRequestsContext implements AccountsDomain
+BoundedContext AccountsRequests  implements AccountsDomain
 {
 	type = FEATURE
-	domainVisionStatement = "???"
+	domainVisionStatement = "Contexto responsável por lidar com o pedido de criação de contas na plataforma"
 	implementationTechnology = "???"
 	responsibilities = "???"
 	
 	Aggregate AccountRequest
 }
-BoundedContext AccountsCancellationsContext implements AccountsDomain
+BoundedContext AccountsCancellations  implements AccountsDomain
 {
 	type = FEATURE
-	domainVisionStatement = "???"
+	domainVisionStatement = "Contexto responsável por lidar com pedidos de cancelamentos, seja pelo usuário, seja por decisão interna ou por decisão de órgão reculador."
 	implementationTechnology = "???"
 	responsibilities = "???"
 	
 	Aggregate AccountCancellationRequest
 }
-BoundedContext AccountsCreationContext implements AccountsDomain
+BoundedContext AccountsCreation implements AccountsDomain
 {
 	type = FEATURE
-	domainVisionStatement = "???"
+	domainVisionStatement = "Contexto responsável por realizar a criação de uma conta, bem como validar se há autorização de órgãos de crédito e afins."
 	implementationTechnology = "???"
 	responsibilities = "???"
 	
 	Aggregate AccountCreationRequest
 }
-BoundedContext LoginsContext implements LoginsDomain
+BoundedContext Logins  implements LoginsDomain
 {
-	type = FEATURE
-	domainVisionStatement = "???"
+	type = APPLICATION
+	domainVisionStatement = "Contexto responsável pelo login, logout e todo o controle de segurança relacionado ao tema."
 	implementationTechnology = "???"
 	responsibilities = "???"
 	
 	Aggregate Login
 }
-BoundedContext InternalWalletContext implements WalletsDomain
+BoundedContext InternalWallet  implements WalletsDomain
 {
 	type = FEATURE
-	domainVisionStatement = "???"
+	domainVisionStatement = "Contexto responsável por lidar com as contas reais em bancos (para fiat) e carteiras reais em possa da Anselmex (para crypto)"
 	implementationTechnology = "???"
 	responsibilities = "???"
 	
 	Aggregate InternalWallet
 }
-BoundedContext CancellationsContext implements AccountsDomain
-{
-	type = FEATURE
-	domainVisionStatement = "???"
-	implementationTechnology = "???"
-	responsibilities = "???"
-	
-	Aggregate CancellationRequest
-}
 
-// Generic
-BoundedContext CreditBodyContext implements CreditBodyDomain
+BoundedContext CreditBody implements CreditBodyDomain
 {
 	type = FEATURE
-	domainVisionStatement = "???"
+	domainVisionStatement = "Contexto responsável por lidar com órgãos externos competentes que validam a condição de crédito do usuário."
 	implementationTechnology = "???"
 	responsibilities = "???"
 	
@@ -173,33 +161,33 @@ ContextMap Anselmex {
 	type = SYSTEM_LANDSCAPE
 	state = TO_BE
 
-	contains UserWalletContext, InternalWalletContext
-	contains WithdrawalsContext
-	contains NftCreationContext, NftTransactionContext
-	contains TransactionsContext
-	contains AccountsRequestsContext
-	contains AccountsCancellationsContext	
-	contains AccountsCreationContext	
-	contains LoginsContext	
-	contains CreditBodyContext	
+	contains UserWallet , InternalWallet 
+	contains Withdrawals 
+	contains NftCreation , NftTransaction 
+	contains Transactions 
+	contains AccountsRequests , AccountsCancellations, AccountsCreation
+	contains Logins
+	contains CreditBody
 	
-	AccountsRequestsContext [P]<->[P]  AccountsCreationContext
-	AccountsCreationContext [U,S]->[D,C]  AccountsCancellationsContext
-	LoginsContext [D,C]<-[U,S]  AccountsCreationContext
-	LoginsContext [D,CF]<-[U]  AccountsCancellationsContext
-	AccountsCreationContext [U,S]->[D,C] WithdrawalsContext
+	AccountsRequests [P]<->[P]  AccountsCreation
+	AccountsCreation [U,S]->[D,C]  AccountsCancellations
+	AccountsCreation [P]<->[P] UserWallet
+	AccountsCreation [U]->[D,ACL] CreditBody
+	AccountsCreation [U,S]->[D,C] Withdrawals
+
+	Logins  [D,C]<-[U,S]  AccountsCreation
+	Logins  [D,CF]<-[U]  AccountsCancellations
 	
-	AccountsCreationContext [P]<->[P] UserWalletContext
-	WithdrawalsContext [D,C]<-[U,S] InternalWalletContext
-	WithdrawalsContext [D,C]<-[U,S]  UserWalletContext
-	WithdrawalsContext [D,C]<-[U,S]  NftTransactionContext
-	WithdrawalsContext [D,C]<-[U,S]  NftCreationContext
-	WithdrawalsContext [D,C]<-[U,S]  TransactionsContext
+	Withdrawals [D,C]<-[U,S] InternalWallet
+	Withdrawals [D,C]<-[U,S]  UserWallet
+	Withdrawals [D,C]<-[U,S]  NftTransaction
+	Withdrawals [D,C]<-[U,S]  NftCreation
+	Withdrawals [D,C]<-[U,S]  Transactions
 
-	UserWalletContext [U,OHS]->[D] TransactionsContext
-	UserWalletContext [U,OHS]->[D]  NftTransactionContext
-	UserWalletContext [P]<->[P]  InternalWalletContext
+	UserWallet [U,OHS]->[D] Transactions
+	UserWallet [U,OHS]->[D]  NftTransaction
+	UserWallet [P]<->[P]  InternalWallet
 
-	AccountsCreationContext [U]->[D,ACL] CreditBodyContext
+	
 	
 }
