@@ -1,0 +1,12 @@
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Domain/obj/Debug/net6.0/Anselmex.Domain.csproj.AssemblyReference.cache
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Domain/obj/Debug/net6.0/Anselmex.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Domain/obj/Debug/net6.0/Anselmex.Domain.AssemblyInfoInputs.cache
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Domain/obj/Debug/net6.0/Anselmex.Domain.AssemblyInfo.cs
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Domain/obj/Debug/net6.0/Anselmex.Domain.csproj.CoreCompileInputs.cache
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Domain/bin/Debug/net6.0/Anselmex.Domain.deps.json
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Domain/bin/Debug/net6.0/Anselmex.Domain.dll
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Domain/bin/Debug/net6.0/Anselmex.Domain.pdb
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Domain/obj/Debug/net6.0/Anselmex.Domain.dll
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Domain/obj/Debug/net6.0/refint/Anselmex.Domain.dll
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Domain/obj/Debug/net6.0/Anselmex.Domain.pdb
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Domain/obj/Debug/net6.0/ref/Anselmex.Domain.dll

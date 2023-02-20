@@ -1,0 +1,12 @@
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Infrastructure/bin/Debug/net6.0/Anselmex.Infrastructure.deps.json
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Infrastructure/bin/Debug/net6.0/Anselmex.Infrastructure.dll
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Infrastructure/bin/Debug/net6.0/Anselmex.Infrastructure.pdb
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Infrastructure/obj/Debug/net6.0/Anselmex.Infrastructure.csproj.AssemblyReference.cache
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Infrastructure/obj/Debug/net6.0/Anselmex.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Infrastructure/obj/Debug/net6.0/Anselmex.Infrastructure.AssemblyInfoInputs.cache
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Infrastructure/obj/Debug/net6.0/Anselmex.Infrastructure.AssemblyInfo.cs
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Infrastructure/obj/Debug/net6.0/Anselmex.Infrastructure.csproj.CoreCompileInputs.cache
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Infrastructure/obj/Debug/net6.0/Anselmex.Infrastructure.dll
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Infrastructure/obj/Debug/net6.0/refint/Anselmex.Infrastructure.dll
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Infrastructure/obj/Debug/net6.0/Anselmex.Infrastructure.pdb
+/home/thiago/Projects/ddd-anselmex/src/Anselmex.Infrastructure/obj/Debug/net6.0/ref/Anselmex.Infrastructure.dll
